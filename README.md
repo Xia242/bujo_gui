@@ -49,6 +49,7 @@ This is a simple Bullet Journal application project designed to provide basic lo
 ### Building
 
 #### Building `bujo_gui` (GUI Version)
+```bash
 
 # Navigate to the GUI project directory
 cd bujo_gui
@@ -65,14 +66,17 @@ cmake ..
 # Run the build
 make
 # or use: cmake --build .
+```
 
 #### Building `bujo_cmd` (CLI Version)
 
+```bash
 # Navigate to the CLI project directory
 cd bujo_cmd
 
 # Compile using a C++ compiler (e.g., g++)
 g++ main.cpp -o bujo_cmd -std=c++17
+```
 
 ### Running
 
