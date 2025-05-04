@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>842</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>電子手帳</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QWidget" name="m_navigationWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="m_navigationLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QToolButton" name="m_todayButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>今日檢視</string>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="m_monthButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>月計畫</string>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="m_futureButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>未來計畫</string>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="m_reviewButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>每日回顧</string>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCalendarWidget" name="m_navigationCalendar">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="m_stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="m_todayView">
+       <layout class="QVBoxLayout" name="m_todayLayout">
+        <item>
+         <widget class="QLabel" name="m_todayDateLabel">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="m_todayEntryTitle"/>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="m_todayEntryContent"/>
+        </item>
+        <item>
+         <widget class="QListWidget" name="m_todayEntryList"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="m_todayButtonLayout">
+          <item>
+           <widget class="QToolButton" name="m_newEntryButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>新增</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="m_editEntryButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>編輯</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="m_deleteEntryButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>刪除</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="m_monthView">
+       <layout class="QVBoxLayout" name="m_monthLayout">
+        <item>
+         <widget class="QCalendarWidget" name="m_monthCalendar"/>
+        </item>
+        <item>
+         <widget class="QListWidget" name="m_monthEntryList"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="m_monthButtonLayout">
+          <item>
+           <widget class="QPushButton" name="m_prevMonthButton">
+            <property name="text">
+             <string>上個月</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="m_nextMonthButton">
+            <property name="text">
+             <string>下個月</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="m_futureView">
+       <layout class="QVBoxLayout" name="m_futureLayout">
+        <item>
+         <widget class="QComboBox" name="m_futureYearCombo"/>
+        </item>
+        <item>
+         <widget class="QListWidget" name="m_futureMonthList"/>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="m_futureLogContent"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="m_futureButtonLayout">
+          <item>
+           <widget class="QToolButton" name="m_newFutureLogEntryButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>新增</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="m_editFutureLogEntryButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>編輯</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="m_deleteFutureLogEntryButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>刪除</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="m_reviewView">
+       <layout class="QVBoxLayout" name="m_reviewLayout">
+        <item>
+         <widget class="QLabel" name="m_reviewDateLabel">
+          <property name="text">
+           <string>日期: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="m_reviewContent"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="m_saveReviewButton">
+          <property name="text">
+           <string>儲存回顧</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>842</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>檔案</string>
+    </property>
+    <addaction name="action_N"/>
+    <addaction name="action_O"/>
+    <addaction name="action_S"/>
+    <addaction name="separator"/>
+    <addaction name="action_E"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>編輯</string>
+    </property>
+    <addaction name="action_U"/>
+    <addaction name="action_R"/>
+    <addaction name="separator"/>
+    <addaction name="action_C"/>
+    <addaction name="action_X"/>
+    <addaction name="action_V"/>
+    <addaction name="separator"/>
+    <addaction name="action_D"/>
+    <addaction name="action_A"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>檢視</string>
+    </property>
+    <addaction name="action_T"/>
+    <addaction name="action_M"/>
+    <addaction name="action_F"/>
+    <addaction name="action_V_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>搜尋</string>
+    </property>
+    <addaction name="action_Search"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>說明</string>
+    </property>
+    <addaction name="action_A_2"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="action_N">
+   <property name="text">
+    <string>新增</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_O">
+   <property name="text">
+    <string>開啟</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="text">
+    <string>儲存</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_E">
+   <property name="text">
+    <string>關閉</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="action_U">
+   <property name="text">
+    <string>復原</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_R">
+   <property name="text">
+    <string>取消復原</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="text">
+    <string>複製</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_X">
+   <property name="text">
+    <string>剪下</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_V">
+   <property name="text">
+    <string>貼上</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="action_D">
+   <property name="text">
+    <string>刪除</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="action_A">
+   <property name="text">
+    <string>全選</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="action_T">
+   <property name="text">
+    <string>今日檢視</string>
+   </property>
+  </action>
+  <action name="action_M">
+   <property name="text">
+    <string>月計畫</string>
+   </property>
+  </action>
+  <action name="action_F">
+   <property name="text">
+    <string>未來計畫</string>
+   </property>
+  </action>
+  <action name="action_V_2">
+   <property name="text">
+    <string>每日回顧</string>
+   </property>
+  </action>
+  <action name="action_Search">
+   <property name="text">
+    <string>搜尋</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_A_2">
+   <property name="text">
+    <string>關於</string>
+   </property>
+  </action>
+  <action name="action_H">
+   <property name="text">
+    <string>說明</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

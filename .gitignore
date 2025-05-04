@@ -1,0 +1,87 @@
+# === Operating System Files ===
+.DS_Store
+Thumbs.db
+
+# === C/C++ / Build Files ===
+# Object files
+*.o
+*.lo
+*.slo
+*.obj
+*.i
+*.pch
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.ipa
+
+# Debug files
+*.dSYM/
+
+# === CMake ===
+# Build directories (adjust if you use different names)
+build/
+cmake-build-*/
+**/cmake-build-*/
+**/CMakeFiles/
+CMakeCache.txt
+install_manifest.txt
+CTestTestfile.cmake
+compile_commands.json
+
+# === Qt ===
+# Qt Creator files
+*.pro.user*
+*.pro.shared
+*.creator
+*.creator.user
+*.autosave
+
+# Qt generated files (usually in build directory, but good to have just in case)
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# Deployment folders (if used)
+# android/
+# ios/
+# macos/
+# winrt/
+
+# === IDEs / Editors ===
+# VS Code
+.vscode/
+
+# CLion / IntelliJ
+.idea/
+
+# Vim
+*~
+*.swp
+*.swo
+
+# === Project Specific ===
+# Command-line version data file (IMPORTANT: uncomment if you DON'T want to commit your journal data)
+# bujo_cmd/journal.txt
+
+# GUI version data file (IMPORTANT: uncomment if you DON'T want to commit your journal data)
+# bujo_gui/*.json
+
+# If the GUI saves data in the root or another location, add that pattern too
+# *.json
