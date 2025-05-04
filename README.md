@@ -50,7 +50,6 @@ This is a simple Bullet Journal application project designed to provide basic lo
 
 #### Building `bujo_gui` (GUI Version)
 
-```bash
 # Navigate to the GUI project directory
 cd bujo_gui
 
@@ -69,7 +68,6 @@ make
 
 #### Building `bujo_cmd` (CLI Version)
 
-```bash
 # Navigate to the CLI project directory
 cd bujo_cmd
 
